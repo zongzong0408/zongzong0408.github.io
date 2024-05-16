@@ -1,3 +1,5 @@
-file name: test_icon
-file type: png
-reference: https://www.flaticon.com/free-icon/testing_6403868?term=test&page=1&position=11&origin=search&related_id=6403868
+Source of Internet resources
+
+File Name: test_icon
+File Type: png
+Reference: https://www.flaticon.com/free-icon/testing_6403868?term=test&page=1&position=11&origin=search&related_id=6403868
