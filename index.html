@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>朱容徵｜ᴢᴏɴɢ ᴢᴏɴɢ 的個人網站</title>
-<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+
+<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
@@ -205,150 +205,104 @@ mark .md-meta { color: rgb(0, 0, 0); }
 mjx-container { break-inside: avoid; }
 
 
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
 :root {
-    /* Text editor */
-    --bg-color: #2f3437;
-    --text-color: #ebebeb;
-    --body-text-color: #ebebeb;
-    --text-cursor-color: var(--text-color);
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
 
-    --secondary-text-color: #73726e;
-    --text-accent-color: #393c3f;
-    --bg-color-dark: #3f4447;
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
 
-    --text-highlight-color: #fff;
-    --text-highlight-bg: #4f4029;
-
-    --code-fence-text-color: #ec5757;
-    --code-fence-bg-color: #3f4447;
-
-    --blockquote-bg-color: var(--bg-color);
-    --blockquote-accent-color: var(--text-color);
-    --blockquote-text-color: var(--text-color);
-
-    --light-trait-100: #ebebeb;
-    --light-trait-200: #ebebeb;
-    --light-trait-300: #ebebeb;
-    --light-trait-400: #ebebeb;
-
-    --todo-bg-color: #2eaadc;
-    --todo-tick-color: #fff;
-
-    --search-select-bg-color: #2e443a;
-    --search-select-text-color: #eaedec;
-
-    --search-hit-text-color: #eceded;
-    --search-hit-bg-color: #5e3436;
-
-    --url-text-color: var(--text-color);
-    --url-underline-color: var(--text-color);
-
-    --footnote-text-color: #b1b3b4;
-    --footnote-bg-color: #393c3f;
-
-    --table-primary-color: var(--bg-color);
-    --table-secondary-color: var(--bg-color);
-
-    --select-text-bg-color: #2e5767;
-
-    --code-color: #9a6e3a;
-    --code-cursor-color: var(--text-color);
-
-    --kbd-text-color: #acaeaf;
-    --kbd-bg-color: var(--bg-color-dark);
-
-    /* Menu system */
-    --side-bar-bg-color: var(--bg-color-dark);
-    --side-bar-text-color: var(--text-color);
-    --item-hover-bg-color: #4b5053;
-    --window-border: 1px solid var(--bg-color);
-
-    --active-file-bg-color: #4b5053;
-    --active-file-border-color: var(--active-file-bg-color);
-    --active-file-text-color: var(--text-color);
-
-    --footer-bg-color: var(--side-bar-bg-color);
-
-    --control-text-color: #afb1b2;
-
-    /* General */
-    --font-size: 16px;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    --monospace: 'SF Mono Medium', 'Fira Code', 'Cousine', 'Consolas', monospace;
-    --heading-char-color: var(--light-trait-400);
-    --color-popover-bg-color: var(--text-color);
-    --rawblock-edit-panel-bd: var(--bg-color-dark);
-    --meta-content-color: var(--body-text-color);
-    --primary-btn-border-color: var(--body-text-color);
-    --border-radius: 4px;
-
-
-    /* Code variables */
-    --cm-line: #b8babb;
-    --cm-variable: var(--text-color);
-    --cm-keyword: #d1949e;
-    --cm-tag: #d1949e;
-    --cm-bracket: #d1949e;
-    --cm-error: #ff5a5a;
-    --cm-attribute: #d1949e;
-    --cm-def: #eceded;
-    --cm-comment: #998066;
-    --cm-string: #bde052;
-    --cm-operator: #f5b83d;
-    --cm-number: #d1949e;
-    --cm-meta: var(--text-color);
-    --cm-atom: #845dc4;
-    --cm-builtin: #bde052;
-    --cm-property: var(--text-color);
-    --cm-variable-2: var(--text-color);
-    --cm-variable-3: #bde052;
-    --cm-gutter: #f1f3f450;
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
 }
 
 html {
-    font-size: var(--font-size);
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
-body {
-    font-family: var(--font-family);
-    -webkit-font-smoothing: antialiased;
-    color: var(--body-text-color);
-    line-height: 1.6;
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
 }
 
-code {
-
-    background-color: var(--code-fence-bg-color);
-    padding: 2px 2px 2px 2px;
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
 }
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
 
 #write {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 30px;
-    padding-bottom: 100px;
+	max-width: 40em;
 }
 
 @media only screen and (min-width: 1400px) {
-    #write {
-        max-width: 1024px;
-    }
+	#write {
+			max-width: 914px;
+	}
 }
 
-@media only screen and (min-width: 1800px) {
-    #write {
-        max-width: 1200px;
-    }
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
 }
 
-#write>ul:first-child,
-#write>ol:first-child {
-    margin-top: 30px;
+ol,
+ul {
+	list-style: none;
 }
 
-a {
-    color: var(--text-color);
+blockquote,
+q {
+	quotes: none;
 }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
 
 h1,
 h2,
@@ -356,709 +310,493 @@ h3,
 h4,
 h5,
 h6 {
-    position: relative;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.4;
-    cursor: text;
+	font-weight: bold;
 }
-
-cursor {
-    color: var(--text-cursor-color)
-}
-
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-
-h1 tt,
-h1 code,
-h2 tt,
-h2 code,
-h3 tt,
-h3 code,
-h4 tt,
-h4 code,
-h5 tt,
-h5 code,
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-
 h1 {
-    padding-bottom: 0.3em;
-    font-size: 2.2em;
-    line-height: 1.3;
-    color: var(--light-trait-100);
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
 }
-
-h2 {
-    padding-bottom: 0.3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    color: var(--light-trait-200);
-}
-
+h2,
 h3 {
-    font-size: 1.4em;
-    line-height: 1.43;
-    color: var(--light-trait-300);
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
 }
-
+h3 {
+	font-weight: normal;
+}
 h4 {
-    font-size: 1.2em;
-    color: var(--light-trait-400);
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
 }
-
-h5 {
-    font-size: 1em;
-    color: var(--light-trait-400);
-}
-
+h5,
 h6 {
-    font-size: 1em;
-    color: var(--light-trait-400);
+	font-size: 1em;
+	/*16*/
 }
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
 
 p,
 blockquote,
-ul,
-ol,
-dl,
-table {
-    margin: 0.8em 0;
+.md-fences {
+	margin-bottom: 1.5em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
 
-li>ol,
-li>ul {
-    margin: 0 0;
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
 }
-
-hr {
-    background-color: var(--light-trait-100);
-    height: 1.5px;
-    border: none
-}
-
-a,
-.md-def-url {
-    color: var(--url-text-color);
-    text-decoration: none;
-    border-bottom: 0.05em solid;
-    border-color: var(--url-underline-color);
-    transition: all .1s ease-in;
-}
-
-a:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
-sup.md-footnote {
-    background-color: var(--footnote-bg-color);
-    color: var(--footnote-text-color);
-}
-
-li p.first {
-    display: inline-block;
-}
+/* lists */
 
 ul,
 ol {
-    padding-left: 30px;
+	margin: 0 0 1.5em 1.5em;
 }
-
-ul:first-child,
-ol:first-child {
-    margin-top: 0.35%;
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
 }
-
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-
-mark,
-.ty-file-search-match-text,
-.md-search-hit {
-    background: var(--search-hit-bg-color);
-    color: var(--search-hit-text-color);
-}
-
-mark {
-    border-radius: 4px;
-    color: var(--text-highlight-color);
-    font-weight: inherit;
-    background-color: var(--text-highlight-bg);
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.md-search-hit * {
-    background: var(--search-select-bg-color);
-    color: var(--search-select-text-color);
-}
-
-/* Search highlight */
-.cm-search-hit.CodeMirror-selectedtext,
-.md-search-hit.md-search-select,
-.md-search-select {
-    outline: 0px solid var(--search-select-text-color);
-}
-
-.outline-item.select,
-.ty-search-item-line.select,
-.ty-search-item.select {
-    outline-width: 2px;
-}
-
-.outline-item.select {
-    outline-offset: 0px;
-}
-
-blockquote {
-    color: var(--blockquote-text-color);
-    margin-left: 1.75px;
-    margin-right: 0px;
-    border-left: 4px solid var(--blockquote-accent-color);
-    padding: 10px 14px 7px 22px;
-    /* change the quote highlight */
-    background-color: var(--blockquote-bg-color);
-}
-
-blockquote blockquote {
-    padding-right: 0;
-}
-
-/* Alternating color rows in table*/
-table tr:nth-child(2n) {
-    background-color: var(--table-primary-color);
-}
-
-table tr:nth-child(2n + 1) {
-    background-color: var(--table-secondary-color);
-}
-
-/* Alternating color rows in table*/
 
 table {
-    padding: 0;
-    word-break: initial;
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
 }
 
-table tr {
-    border-top: 1px solid var(--text-accent-color);
-    margin: 0;
-    padding: 0;
-}
-
-table tr th {
-    font-weight: bold;
-    border: 1px solid var(--text-accent-color);
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-
-table tr td {
-    border: 1px solid var(--text-accent-color);
-    margin: 0;
-    padding: 6px 13px;
-}
-
-table tr th:first-child,
-table tr td:first-child {
-    margin-top: 0;
-}
-
-table tr th:last-child,
-table tr td:last-child {
-    margin-bottom: 0;
-}
-
-kbd {
-    font-size: 0.875rem;
-    background: var(--kbd-bg-color);
-    border: 1px solid var(--text-accent-color);
-    box-shadow: 0 2px 0 var(--text-accent-color);
-    color: var(--kbd-text-color);
-}
-
-.md-fences,
 code,
-tt {
-    border: none;
-    color: var(--code-fence-text-color);
-    background-color: var(--code-fence-bg-color);
-    border-radius: var(--border-radius);
-    padding: 2px 4px 0px 4px;
-    font-size: 0.975em;
-    font-weight: medium;
-    font-family: var(--monospace)
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
 .md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
 }
 
 #write pre.md-meta-block {
-    padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: var(--bg-color-dark);
-    border: 0;
-    border-radius: var(--border-radius);
-    color: var(--secondary-text-color);
-    margin-top: 0 !important;
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
-#write .mathjax-block .md-rawblock-tooltip {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
-
-
-#write .mathjax-block .md-math-container {
-    border-top-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-}
-
-#write .md-mathblock-panel .md-rawblock-control:first-of-type {
-    border-top-left-radius: var(--border-radius);
-}
-
-.md-mathjax-midline {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.md-inline-math script {
-    color: var(--code-color);
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: none;
-    border-radius: var(--border-radius);
-}
-
-#write .code-tooltip {
-    bottom: initial;
-    top: 100%;
-    left: initial;
-    right: -1px;
-    background: var(--bg-color-dark);
-    border: 1px solid var(--text-accent-color);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-top: 0;
-    font-family: var(--monospace);
-}
-
-#write .md-mathblock-panel .code-tooltip {
-    right: 0;
-    border: none;
-}
-
-/* TODO */
-#write .md-task-list-item>input {
-    -webkit-appearance: initial;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    border: 1px solid var(--text-color);
-    /* border-radius: 100%; */
-    margin-left: -1.45rem;
-    height: 0.95rem;
-    width: 0.95rem;
-    transition: all 0.35s;
-}
-
-#write .md-task-list-item>input:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-#write .md-task-list-item>input[checked] {
-    background: var(--todo-bg-color);
-    border: 1px solid var(--todo-bg-color);
-    text-decoration: line-through;
-}
-
-#write .md-task-list-item>input[checked]::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: '✓';
-    position: absolute;
-    margin-top: 0.05rem;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    color: var(--todo-tick-color);
-    font-size: 0.75em;
-    font-weight: 600;
-}
-
-#write .md-task-list-item>input[checked]::after {
-    text-decoration: line-through;
-}
-
-/* TODO */
 .md-image>.md-meta {
-    border-radius: var(--border-radius);
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
+	color: #9B5146;
 }
 
-.md-toc {
-    margin-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* Source mode */
-.CodeMirror.cm-s-typora-default *,
-.cm-s-typora-default * {
-    background: inherit;
-    color: var(--body-text-color);
-    font-family: var(--monospace);
-    font-size: var(--font-size) !important;
-    font-style: normal;
-    font-weight: medium;
-}
-
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-    border-left: 2.35px solid var(--code-cursor-color);
-}
-
-.CodeMirror div.CodeMirror-cursor {
-    border-left: 2.35px solid var(--code-cursor-color);
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
 }
 
 
-.sidebar-tabs {
-    border-bottom: none;
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
 }
 
-.outline-expander {
-    width: 1.5rem;
-    vertical-align: initial;
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
 }
 
-.outline-expander:before,
-.outline-expander:hover:before,
-.outline-item-open>.outline-item>.outline-expander:before,
-.outline-item-open>.outline-item>.outline-expander:hover:before {
-    content: "\f125";
-    transition: transform 125ms ease-in-out;
+.md-toc-content:empty:before{
+	color: #065588;
 }
-
-.outline-item-open>.outline-item>.outline-expander:hover:before,
-.outline-item-open>.outline-item>.outline-expander:before {
-    transform: rotate(90deg);
+.md-toc-item {
+	color: #065588;
 }
-
-.outline-label:hover {
-    text-decoration: none;
-}
-
-#toc-dropmenu {
-    background: var(--bg-color-dark);
-}
-
-#toc-dropmenu .outline-title {
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.dropdown-menu .divider {
-    display: none;
-}
-
-.context-menu {
-    border: none !important;
-    backdrop-filter: saturate(180%) blur(20px) brightness(1.1);
-    background-color: var(--bg-color-dark);
-    box-shadow: 0 25.6px 57.6px 0 var(--text-accent-color), 0 4.8px 14.4px 0 var(--text-accent-color) !important;
-}
-
-.file-node-background {
-    height: 31px;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state {
-    visibility: visible;
-}
-
-.file-node-icon {
-    margin-right: 8px;
-}
-
-.file-library-node:not(.file-node-root):focus>.file-node-content {
-    outline: none;
-}
-
-/* New file animation */
-.blink-area {
-    animation: none;
-}
-
-.file-list-item-summary {
-    font-size: var(--font-size);
-    font-family: var(--font-family);
-}
-
-#md-searchpanel input {
-    border-radius: var(--border-radius);
-    box-shadow: none;
-}
-
-#md-searchpanel input:focus {
-    box-shadow: none;
-    border-color: var(--meta-content-color);
-}
-
-#md-searchpanel .search-type-selection {
-    width: auto;
-}
-
-#md-searchpanel .btn:not(.close-btn):hover {
-    box-shadow: none;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    color: var(--sidebar-text-color);
-    background-color: var(--side-bar-bg-color);
-}
-
-#md-notification .btn {
-    border: 0;
-}
-
-/* CODE HIGHLIGHT */
-pre.CodeMirror-line {
-    color: var(--cm-line) !important
-}
-
-.cm-variable {
-    color: var(--cm-variable) !important
-}
-
-.cm-keyword {
-    color: var(--cm-keyword) !important
-}
-
-.cm-tag {
-    color: var(--cm-tag) !important
-}
-
-.cm-variable-3 {
-    color: var(--cm-variable-3) !important
-}
-
-.cm-bracket {
-    color: var(--cm-bracket);
-}
-
-.cm-error {
-    color: var(--cm-error) !important;
-}
-
-.cm-attribute {
-    color: var(--cm-attribute) !important
-}
-
-.cm-def {
-    color: var(--cm-def) !important
-}
-
-.cm-comment {
-    color: var(--cm-comment) !important
-}
-
-.cm-string {
-    color: var(--cm-string) !important;
-    font-variant-ligatures: common-ligatures !important;
-}
-
-.cm-tag:not() {
-    font-weight: 700;
-}
-
-.cm-operator {
-    color: var(--cm-operator) !important
-}
-
-.cm-number {
-    color: var(--cm-number) !important
-}
-
-.cm-meta {
-    color: var(--cm-meta) !important;
-    font-weight: 700 !important;
-}
-
-.cm-atom {
-    color: var(--cm-atom) !important
-}
-
-.cm-builtin {
-    color: var(--cm-builtin) !important
-}
-
-.cm-property {
-    color: var(--cm-property) !important
-}
-
-.cm-variable-2 {
-    color: var(--cm-variable-2) !important
-}
-
-
-/* CODE HIGHLIGHT */
-
-.file-tree-node.active>.file-node-background {
-    color: var(--active-file-text-color);
-    background-color: var(--active-file-bg-color);
-    border-left: 0px solid var(--active-file-border-color) !important;
-    border-color: var(--active-file-border-color) !important;
-}
-
-.CodeMirror-gutters {
-    border-right: 1px solid var(--cm-gutter);
-    background: inherit;
-    white-space: nowrap;
-}
-
-.ty-footer,
-.sidebar-footer,
-footer {
-    backdrop-filter: saturate(120%) blur(20px) brightness(0.85);
-    border: none !important;
-    background: none;
-    background-color: var(--footer-bg-color);
-}
-
-.code-tooltip {
-    border-radius: 4px;
-    background-color: var(--dark-trait);
-    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .52), 0 4.8px 14.4px 0 rgba(0, 0, 0, .28) !important;
-}
-
-#sidebar-files-menu {
-    color: var(--side-bar-text-color);
-    border-radius: 4px;
-    border: none !important;
-    box-shadow: 0 25.6px 57.6px 0 var(--text-accent-color), 0 4.8px 14.4px 0 rgba(0, 0, 0, .28);
-}
-
-.code-tooltip.md-tooltip-hide.md-hover-tip {
-    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .52), 0 4.8px 14.4px 0 rgba(0, 0, 0, .28);
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
 }
 
 #typora-sidebar {
-    border: none !important;
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
 }
 
-#footer-word-count-info,
-#spell-check-panel {
-    border: none !important;
-    backdrop-filter: saturate(120%) blur(20px) brightness(0.85) !important;
-    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .32), 0 4.8px 14.4px 0 rgba(0, 0, 0, .28) !important;
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
 }
 
-/* Windows/Linux unibody mode */
-.megamenu-content,
-.megamenu-opened header {
-    color: var(--body-text-color);
-    background: var(--bg-color-dark);
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
 }
 
-#recent-file-panel-action-btn {
-    background: inherit;
-    border: 1px var(--light-trait-300) solid;
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
 }
 
-.megamenu-menu-panel table td:nth-child(1) {
-    color: var(--text-color);
-    background: var(--bg-color-dark);
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
 }
 
-.megamenu-menu-panel table td:nth-child(2) {
-    color: var(--text-color);
-    background: var(--bg-color-dark);
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
 }
 
-.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
-    color: var(--text-color);
-    background: var(--active-file-bg-color);
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
 }
 
-.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
-    color: var(--text-color);
-    background: var(--active-file-bg-color);
+.modal-content {
+	background-color: #f3f2ee;
 }
 
-.megamenu-menu-panel input[type='text'] {
-    background: inherit;
-    border: 1px var(--control-text-color) solid;
+.auto-suggest-container ul li {
+	list-style-type: none;
 }
 
-#recent-file-panel-action-btn {
-    background: inherit;
-}
+/** UI for electron */
 
 .megamenu-menu,
+#top-titlebar, #top-titlebar *,
 .megamenu-content {
-    background: var(--side-bar-bg-color);
-    color: var(--text-color);
+	background: #f3f2ee;
+	color: #1f0909;
 }
 
-#top-titlebar,
-#top-titlebar * {
-    background: inherit;
-    color: var(--text-color);
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
 }
 
 .megamenu-menu-header #megamenu-menu-header-title:before {
-    color: var(--text-color);
+	color: #1f0909;
 }
 
-megamenu-back-btn {
-    color: var(--text-color);
-    border-color: var(--text-color);
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
 }
 
-.megamenu-menu-header #megamenu-menu-header-title,
-.megamenu-menu-header:hover,
-.megamenu-menu-header:focus {
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
     color: inherit;
 }
 
-.megamenu-menu-panel table tr:nth-child(2n + 1) {
-    background-color: var(--side-bar-bg-color);
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+	-webkit-appearance: button;
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+	opacity: 1;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
+}
+
+.export-detail, .light .export-detail, 
+.light .export-item.active, 
+.light .export-items-list-control {
+	background: #e0e0e0;
+	border-radius: 2px;
+	font-weight: 700;
+	color: inherit
 }
 .md-toc{
  	position: fixed; 
@@ -1069,7 +807,7 @@ megamenu-back-btn {
 </style><title>index</title>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#朱容徵｜ᴢᴏɴɢ-ᴢᴏɴɢ">朱容徵｜ᴢᴏɴɢ ᴢᴏɴɢ</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#目錄">目錄</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#自我介紹">自我介紹</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#經歷">經歷</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#興趣">興趣</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#研習比賽">研習&amp;比賽</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#作品">作品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#證照">證照</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其他">其他</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#網站日記">網站日記</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><h1 id='朱容徵｜ᴢᴏɴɢ-ᴢᴏɴɢ'><span>朱容徵｜ᴢᴏɴɢ ᴢᴏɴɢ</span></h1><blockquote><p><span>這是關於朱容徵自述的網站。</span></p></blockquote><h1 id='目錄'><span>目錄</span></h1><ul><li><p><a href='#目錄'><span>目錄</span></a></p></li><li><p><a href='#自我介紹'><span>自我介紹</span></a></p></li><li><p><a href='#研習比賽'><span>研習比賽</span></a></p></li><li><p><a href='#作品'><span>作品</span></a></p></li><li><p><a href='#證照'><span>證照</span></a></p></li><li><p><a href='#其他'><span>其他</span></a></p></li><li><p><a href='#網站日記'><span>網站日記</span></a></p></li></ul><h1 id='自我介紹'><span>自我介紹</span></h1><p><span>你好😜，我叫朱容徵，高中畢業於台北市立中正高中。</span><br/><span>我的個性樂觀但會想到會壞的結果；決定了目的就不放棄卻不迂腐。</span><br/><span>本身興趣在電腦科學，軟體設計、遊戲設計、資訊安全、圖像辨識、物聯網。</span><br/><span>專業擅長</span><code>C99</code><span>、</span><code>Python3.7.0</code><span>、</span><code>Java8</code><span>；會用</span><code>C++</code><span>、</span><code>C#</code><span>、</span><code>HTML&amp;CSS&amp;JS</code><span>。</span><br/><span>心理的夢想是可以財富自由，對我來說就是</span><strong><span>去吃爭鮮都不用數盤子</span></strong><span>🤣。</span><br/><span>希望可以考上好學校，還有賺大錢帶家人出去世界看看。</span></p><blockquote><p><span>君子務本，本立而道生。</span></p></blockquote><h1 id='經歷'><span>經歷</span></h1><ul><li><h2 id='啟發'><span>啟發</span></h2><p><span>在國小時因為使用Scratch而對電腦科學產生了興趣，後來也自己動手做了遊戲、動畫，甚至在校內比賽的到特優。至此，我對電腦科學的興趣徹底萌芽。</span></p></li><li><h2 id='高中三年'><span>高中三年</span></h2><p><span>高一，感謝中正高中賴和隆老師的啟發，我下定決心先學習一種高階語言以打好程式基礎。於是，我選擇賴老師推薦的C語言作為我的地基石，再利用學校的程式競賽平台18dice磨練程式設計技巧，與上網自學語法、debug，自學掌握第一種程式語言。</span></p><p><span>高二，我使用C語言參加APCS、IOT海選、校內競賽、日常刷zerojudge的方式反覆訓練程式競賽技巧。爭取獲得好成績的同時，養成在固定時間內設計指定程式的能力，順便提升抗壓性。</span></p><p><span>高三，我對不斷重複的程式競賽感到厭倦，覺得這跟我當初想接觸電腦科學的想法不一致。因此我決定利用我在程式競賽累積下來的實力，去做出一些自己有興趣的side project。學習Design Pattern，並且了解可讀性、可維護性、可變更性的專案開發要求，學習製作專題的能力。  </span></p><p><span>在此同時，比起讀自己沒有興趣的課程，我更傾向於鑽研資訊領域。我會在有興趣的科目投入大量時間練習、鑽研，並且盡力做到完善。而且在製作資訊專題時，我獲得到很多的快樂、成就感、滿足感。</span></p></li><li><h2 id='大一'><span>大一</span></h2><p><span>大一，進了國立勤益科大就讀，參加了許多課外活動，譬如加入智慧台中創客基地，成為種子學員、參加大學伴計畫。也體驗到了新的事物，第一次班排一兼系排一、第一次騎車從台中騎回台北玩、第一次住在學校。我覺得很新奇也很安逸舒適，但是後來隱約覺得這所學校環境不太適合我。比如說，我希望能遇到更多志同道合且能力相當的同學，很懷念以前同組成員為了比賽專題通宵奮鬥、絞盡腦汁的情懷。以下是幾點對我來說很酷的活動。</span></p></li><li><h2 id='智慧台中創客基地-種子學員'><span>智慧台中創客基地 種子學員</span></h2><p><span>智慧台中創客基地位於勤益科大的工具機大樓4F，主要提供創客們場地、設備做使用。創客們可以在基地使用工業型機具（e.g. 水冷雷雕機、木工鉋木、金工桌、大型3D列印機、etc.）主要是提供創客創造之外，對本校學生提供創業幫助，很希望學生去創業或是創意競賽（黑客松之類的）。</span><br/><span>種子學員則是學校的工讀生，負責維護、檢修基地內的設備，還有教導使用者操作機具與維護安全暨宣導正確操作觀念，不過要當種子學員需要經過創客基地負責教授，電子系顏孟華教授的面試，需要具備創客精神，和會基本機具操作、維修，以及突出專業技能，不過，成為種子學員後每個月會有2000元的補助費和免費使用設備的福利，蠻不錯的。由於我的專業能力偏向軟體，所以我主力是負責資訊相關的工作（維護基地那些的還是得做啦😂）。</span>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#朱容徵｜ᴢᴏɴɢ-ᴢᴏɴɢ-的個人網站">朱容徵｜ᴢᴏɴɢ ᴢᴏɴɢ 的個人網站</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#目錄">目錄</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#自我介紹">自我介紹</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#經歷">經歷</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#興趣">興趣</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#研習比賽">研習&amp;比賽</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#作品">作品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#證照">證照</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其他">其他</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#網站日記">網站日記</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><h1 id='朱容徵｜ᴢᴏɴɢ-ᴢᴏɴɢ-的個人網站'><span>朱容徵｜ᴢᴏɴɢ ᴢᴏɴɢ 的個人網站</span></h1><blockquote><p><span>這是關於朱容徵自述的網站。</span></p></blockquote><h1 id='目錄'><span>目錄</span></h1><ul><li><p><a href='#目錄'><span>目錄</span></a></p></li><li><p><a href='#自我介紹'><span>自我介紹</span></a></p></li><li><p><a href='#研習比賽'><span>研習比賽</span></a></p></li><li><p><a href='#作品'><span>作品</span></a></p></li><li><p><a href='#證照'><span>證照</span></a></p></li><li><p><a href='#其他'><span>其他</span></a></p></li><li><p><a href='#網站日記'><span>網站日記</span></a></p></li></ul><h1 id='自我介紹'><span>自我介紹</span></h1><p><span>你好😜，我叫朱容徵，高中畢業於台北市立中正高中。</span><br/><span>我的個性樂觀但會想到會壞的結果；決定了目的就不放棄卻不迂腐。</span><br/><span>本身興趣在電腦科學，軟體設計、遊戲設計、資訊安全、圖像辨識、物聯網。</span><br/><span>專業擅長</span><code>C99</code><span>、</span><code>Python3.7.0</code><span>、</span><code>Java8</code><span>；會用</span><code>C++</code><span>、</span><code>C#</code><span>、</span><code>HTML&amp;CSS&amp;JS</code><span>。</span><br/><span>心理的夢想是可以財富自由，對我來說就是</span><strong><span>去吃爭鮮都不用數盤子</span></strong><span>🤣。</span><br/><span>希望可以考上好學校，還有賺大錢帶家人出去世界看看。</span></p><blockquote><p><span>君子務本，本立而道生。</span></p></blockquote><h1 id='經歷'><span>經歷</span></h1><ul><li><h2 id='啟發'><span>啟發</span></h2><p><span>在國小時因為使用Scratch而對電腦科學產生了興趣，後來也自己動手做了遊戲、動畫，甚至在校內比賽的到特優。至此，我對電腦科學的興趣徹底萌芽。</span></p></li><li><h2 id='高中三年'><span>高中三年</span></h2><p><span>高一，感謝中正高中賴和隆老師的啟發，我下定決心先學習一種高階語言以打好程式基礎。於是，我選擇賴老師推薦的C語言作為我的地基石，再利用學校的程式競賽平台18dice磨練程式設計技巧，與上網自學語法、debug，自學掌握第一種程式語言。</span></p><p><span>高二，我使用C語言參加APCS、IOT海選、校內競賽、日常刷zerojudge的方式反覆訓練程式競賽技巧。爭取獲得好成績的同時，養成在固定時間內設計指定程式的能力，順便提升抗壓性。</span></p><p><span>高三，我對不斷重複的程式競賽感到厭倦，覺得這跟我當初想接觸電腦科學的想法不一致。因此我決定利用我在程式競賽累積下來的實力，去做出一些自己有興趣的side project。學習Design Pattern，並且了解可讀性、可維護性、可變更性的專案開發要求，學習製作專題的能力。  </span></p><p><span>在此同時，比起讀自己沒有興趣的課程，我更傾向於鑽研資訊領域。我會在有興趣的科目投入大量時間練習、鑽研，並且盡力做到完善。而且在製作資訊專題時，我獲得到很多的快樂、成就感、滿足感。</span></p></li><li><h2 id='大一'><span>大一</span></h2><p><span>大一，進了國立勤益科大就讀，參加了許多課外活動，譬如加入智慧台中創客基地，成為種子學員、參加大學伴計畫。也體驗到了新的事物，第一次班排一兼系排一、第一次騎車從台中騎回台北玩、第一次住在學校。我覺得很新奇也很安逸舒適，但是後來隱約覺得這所學校環境不太適合我。比如說，我希望能遇到更多志同道合且能力相當的同學，很懷念以前同組成員為了比賽專題通宵奮鬥、絞盡腦汁的情懷。以下是幾點對我來說很酷的活動。</span></p></li><li><h2 id='智慧台中創客基地-種子學員'><span>智慧台中創客基地 種子學員</span></h2><p><span>智慧台中創客基地位於勤益科大的工具機大樓4F，主要提供創客們場地、設備做使用。創客們可以在基地使用工業型機具（e.g. 水冷雷雕機、木工鉋木、金工桌、大型3D列印機、etc.）主要是提供創客創造之外，對本校學生提供創業幫助，很希望學生去創業或是創意競賽（黑客松之類的）。</span><br/><span>種子學員則是學校的工讀生，負責維護、檢修基地內的設備，還有教導使用者操作機具與維護安全暨宣導正確操作觀念，不過要當種子學員需要經過創客基地負責教授，電子系顏孟華教授的面試，需要具備創客精神，和會基本機具操作、維修，以及突出專業技能，不過，成為種子學員後每個月會有2000元的補助費和免費使用設備的福利，蠻不錯的。由於我的專業能力偏向軟體，所以我主力是負責資訊相關的工作（維護基地那些的還是得做啦😂）。</span>
 <span>	</span>
 <span>可惜的是我第一次成為種子學員也應該會是學校最後一屆，由於學校經費問題，種子學員在112學年度上學期結束後就先解散了，想當初還幻想自己可以在基地學習四年。我們工讀生總共也只有三位，後來新增一位機動成員。在這段時間，用幾句話總結就是很辛苦、學習的要很用力、常常被老闆罵、需要會待人處事、抗壓性要強、感覺跟進入職場沒兩樣。因為我是高中生，對於操作那些機器很不熟悉，機具說明書有時候我也看不懂😢，因此常常有問題都需要別人教，還好跟我共事的機械系張學長對我很好，很有耐心的教學機具使用（當時如果你沒教我我就掰掰了😖），另一位陳學姊對人也很好😊，人超好。</span>
 <span>	</span>
@@ -1080,7 +818,7 @@ megamenu-back-btn {
 <span>後來看了很多非儒家典籍，《金剛經》、《道德經》、〈齊物論〉。希望能透過明宋以前的思想幫助我擴展眼界，不過因為如此倒是對儒道釋有了更深的見解，推己及人（講求從自己開始發散到幫助別人，我認為是順序）、自然而然（順應自己的本心）、莫向外求（不要向外強求，自立自強）。希望能因此成為更好的人。</span></p><!-- [文章篇幅有限，點擊此處了解更多呦...😜](./) --></li><li><h2 id='看小說'><span>看小說</span></h2><p><span>我很喜歡看小說，我很愛看那種修仙武俠傳，有幾本我覺得很有意思的書，「明史演義」、「劍來」、「武煉巔峰」、「全職法師」、「神魂丹帝」。對於那些一個個充滿想像力的世界感到新奇，總覺得能將小小的文字構築出形形色色的人物和世界很厲害，尤其是劍來，將人物與劇情刻畫之深，讓我對未來的美好又更崇景了幾分。明史演義則是讓我覺得那些成就非凡事物的人都經歷過不平凡的事，朱元璋能依仗小小的船打敗掌有雄偉戰艦百餘艘的陳友諒，可謂佩服其膽魄之大。看小說是我在手機上的娛樂方式，讓自己放空充電一下，還能提高想像力，有時也可學到一些名言、生僻字。</span></p></li></ul><hr /><h1 id='研習比賽'><span>研習&amp;比賽</span></h1><ul><li><h2 id='高中三年-2'><span>高中三年</span></h2><figure class='table-figure'><table><thead><tr><th><span>研習活動</span></th><th style='text-align:center;' ><span>舉辦單位</span></th></tr></thead><tbody><tr><td><span>中正高中 資訊研究社</span></td><td style='text-align:center;' ><span>臺北市立中正高中</span></td></tr><tr><td><span>2021 北區高中職資安社團體驗營</span></td><td style='text-align:center;' ><span>教育部</span></td></tr><tr><td><span>IBM SkillsBuild Challenge 2021</span></td><td style='text-align:center;' ><span>CSR Intern, IBM Taiwan</span></td></tr><tr><td><span>台大資訊之芽培訓計畫 北區Python語法班</span></td><td style='text-align:center;' ><span>國立臺灣大學</span></td></tr><tr><td><span>SYSTEX精誠資訊、訊連科技、玩美移動 企業參訪</span></td><td style='text-align:center;' ><span>國立臺灣大學</span></td></tr><tr><td><span>教育部先進資通安全實務人才培育計畫 AIS3 新型態資安暑期課程</span></td><td style='text-align:center;' ><span>教育部</span></td></tr><tr><td><span>教育部先進資通安全實務人才培育計畫 AIS3 Juniors 新型態高中職資安暑期課程</span></td><td style='text-align:center;' ><span>教育部</span></td></tr><tr><td><span>2022年 APCS 課程</span></td><td style='text-align:center;' ><span>國立臺灣師範大學</span></td></tr></tbody></table></figure><p><span>&lt;!-- - 中正高中 資訊研究社 美編、總務</span></p><ul><li><p><span>2021 北區高中職資安社團體驗營</span></p></li><li><p><span>110學年度 科展 佳作</span></p></li><li><p><span>111學年度 科展 佳作</span></p></li><li><p><span>IBM SkillsBuild Challenge 2021</span></p></li><li><p><span>台大資訊之芽培訓計畫 北區Python語法班</span></p></li><li><p><span>SYSTEX精誠資訊、訊連科技、玩美移動 企業參訪</span></p></li><li><p><span>教育部先進資通安全實務人才培育計畫 AIS3 新型態資安暑期課程</span></p></li><li><p><span>教育部先進資通安全實務人才培育計畫 AIS3 Juniors 新型態高中職資安暑期課程</span></p></li><li><p><span>2022年 APCS 課程 --&gt;</span></p></li></ul></li><li><h2 id='大一-2'><span>大一</span></h2><figure class='table-figure'><table><thead><tr><th><span>研習活動</span></th><th style='text-align:center;' ><span>舉辦單位</span></th></tr></thead><tbody><tr><td><span>智慧台中創客基地 種子學員</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>盈錫精密工業股份有限公司企業參訪</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>112年 Meet Taipei 創新創業嘉年華</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>星進股份有限公司企業參訪</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>大專校院創業實戰模擬學習平臺</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>112年 數位學伴計畫</span></td><td style='text-align:center;' ><span>教育部</span></td></tr><tr><td><span>2024 AWSome Day 線上雲端培訓日</span></td><td style='text-align:center;' ><span>國立勤益科技大學 產學處</span></td></tr><tr><td><span>113年 數位學伴計畫</span></td><td style='text-align:center;' ><span>教育部</span></td></tr><tr><td><span>Lova溫室 iNEMU_USR暨教學實踐團隊支援服務 實地參訪</span></td><td style='text-align:center;' ><span>國立勤益科技大學 資工系</span></td></tr><tr><td><span>2024地方創生創意會展行銷競賽</span></td><td style='text-align:center;' ><span>中山醫學大學、國立勤益科技大學、舜元建設股份有限公司</span></td></tr></tbody></table></figure><p><span>&lt;!-- - 智慧台中創客基地 種子學員</span></p><ul><li><p><span>盈錫精密工業股份有限公司企業參訪</span></p></li><li><p><span>112年 Meet Taipei 創新創業嘉年華</span></p></li><li><p><span>星進股份有限公司企業參訪</span></p></li><li><p><span>大專校院創業實戰模擬學習平臺</span></p></li><li><p><span>112年 數位學伴計畫</span></p></li><li><p><span>2024 AWSome Day 線上雲端培訓日</span></p></li><li><p><span>113年 數位學伴計</span></p></li><li><p><span>2024地方創生創意會展行銷競賽 --&gt;</span></p></li></ul></li></ul><hr /><h1 id='作品'><span>作品</span></h1><ul><li><h2 id='高中三年-3'><span>高中三年</span></h2><figure class='table-figure'><table><thead><tr><th><span>Side Project 名稱</span></th><th style='text-align:center;' ><span>使用技術</span></th><th><span>簡述</span></th></tr></thead><tbody><tr><td><span>使用 C 實作經典加密演算法</span></td><td style='text-align:center;' ><code>C</code></td><td><span>對密碼學中眾多的加密演算法，要如何在電腦上實際運行，感到興趣。挑選了幾個經典的加密演算法實作。</span></td></tr><tr><td><span>貪吃蛇 Snake game</span></td><td style='text-align:center;' ><code>C</code></td><td><span>對 Google 上的貪食蛇小遊戲感到興趣，並且臨時想到如果能在終端機上做遊戲很酷。</span></td></tr><tr><td><span>踩地雷 Miner game</span></td><td style='text-align:center;' ><code>C</code></td><td><span>朋友的自主學習計畫，我提供技術指導。要做出踩地雷遊戲。</span></td></tr><tr><td><span>太空侵略者 Space Invaders</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>資訊之芽的期中大作業。本來只需要讓玩家動起來並讓敵人能夠發射子彈便可以，但是我覺得很有趣，我便增加了無敵模式、敵人血量時數量變少速度變快；子彈發射數量變多速度變快。</span></td></tr><tr><td><span>使用 Python 對可施打公費疫苗之診所.csv 檔案進行數據分析</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>朋友的自主學習計畫，我提供技術指導。要爬蟲衛生福利部的可施打公費疫苗之診所.csv 檔案，並做出 Ctrl+F 快速搜尋鍵的功能。</span></td></tr><tr><td><span>使用 Python 實作 Discord 聊天機器人</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>資訊之芽期末大作業。要在裡面放上 1A2B 遊戲，和 TODO List 功能。後來我覺得這樣太枯燥了，便增加撥放音樂功能、敷衍聊天功能，並去除不可預期事件，讓機器可以 24/7 運行。</span></td></tr><tr><td><span>基於 Discord ChatBot 的自動偵測地震回報系統</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>之前 9/18 強震沒有收到國家級警報避難通知，感覺這樣很不可靠，我就覺得需要自己架設一個爬蟲系統來保障地震預警的傳遞，免得又沒有收到。</span></td></tr><tr><td><span>探討機器學習對電子競技的影響</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>偶然看見由 AI 圖像辨識做成的遊戲外掛，就好奇這個新興外掛效用如何？使否可以被遊戲偵測？對遊戲的影響為何（公平性）？</span></td></tr><tr><td><span>使用 AI 圖像辨識進行垃圾分類之探討</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>馬路上政府設立的二分類垃圾桶（一般垃圾、資源回收）常常被民眾亂丟。因此想比較、選擇 AI 圖像辨識模型中最優秀的模型來解決這個社會問題（原先是利用 CNN做自動垃圾分類機器）。</span></td></tr><tr><td><span>街機遊戲 Atmosphere Guardian 太空守護者</span></td><td style='text-align:center;' ><code>C#</code></td><td><span>想製作古早味街機遊戲，像是「雷電」街機遊戲。</span></td></tr><tr><td><span>2D 平面 RPG 遊戲 Endless Darkness 無盡黑暗</span></td><td style='text-align:center;' ><code>C#</code></td><td><span>以我現在技術單單用 C、Python 製作遊戲都有點簡陋，沒有像 3A 大作那樣的光影系統渲染圖片，因此我想使用 Unity 製作出以美術為重點項目的遊戲作品。</span></td></tr><tr><td><span>BGP 劫持對學術網路威脅</span></td><td style='text-align:center;' ><code>其他</code></td><td><span>AIS3 結訓專題報告。我們這組只有我一個高中生，加上關鍵基礎設施不易有實作內容。因此題目定向傾向為有經驗台科大學長專長的 BGP 挾持。</span></td></tr><tr><td><span>中正高中 AP 弱密碼破解</span></td><td style='text-align:center;' ><code>其他</code></td><td><span>想使用學校的強訊號 Wi-Fi，但是被密碼鎖住了，只讓老師用，就想破解完後分享給大家使用。經過不斷的摸索規律，已知密碼排序為 8bit 小寫字母，總共用 26^8 種可能，後來去網咖把它暴力破解出來了，可惜筆電沒有辦法。</span></td></tr></tbody></table></figure></li><li><h2 id='大一-3'><span>大一</span></h2><figure class='table-figure'><table><thead><tr><th><span>Side Project 名稱</span></th><th style='text-align:center;' ><span>使用技術</span></th><th><span>簡述</span></th></tr></thead><tbody><tr><td><span>國立勤益科技大學全自動連接網路腳本</span></td><td style='text-align:center;' ><code>Python</code></td><td><span>因為學校網路經過12小時會斷開連結，所以我製作了一個</span><strong><span>爬蟲腳本</span></strong><span>可以偵測斷網時自動重新連接網路。</span></td></tr><tr><td><span>A CHU TECH &#39;s blog</span></td><td style='text-align:center;' ><code>HTML</code><span>&amp;</span><code>CSS</code><span>&amp;</span><code>JS</code></td><td><span>使用喘統前端標記語言製作的個人網站。負責公開展示我的履歷、表現、專業、作品。</span></td></tr><tr><td><span>MakerBar</span></td><td style='text-align:center;' ><code>HTML</code><span>&amp;</span><code>CSS</code><span>&amp;</span><code>JS</code></td><td><span>024 第 7 屆 致青春創未來全國選拔大賽 參賽作品。製作一個提供創客者和對 3D 列印有需求者，商品交易、交友、論壇的平台，類似模型界的蝦皮、PChome。</span></td></tr><tr><td><span>朱容徵 zong zong</span></td><td style='text-align:center;' ><code>Markdown</code><span>&amp;</span><code>HTML</code><span>&amp;</span><code>CSS</code></td><td><span>主要使用 Markdown 製作</span><strong><span>個人網站</span></strong><span>，簡潔、明確、方便。</span></td></tr></tbody></table></figure></li></ul><hr /><h1 id='證照'><span>證照</span></h1><ul><li><h2 id='高中三年-4'><span>高中三年</span></h2><ul><li><p><span>GEPT 中級</span></p><div align = "center"><img src = "./certification/GEPT 中級.png" width = "512" height = "100%"></div></li><li><p><span>APCS 4+3</span></p><div align = "center">
 	<img src = "./certification/APCS_41.png" width = "512px">
 	<img src = "./certification/APCS_32.png" width = "512px">
-</div></li><li><p><span>IPAS 資訊安全工程師 初級</span></p><div align = "center"><img src = "./certification/IPAS 資訊安全工程師 初級.png" width = "512" height = "100%"></div></li></ul></li><li><h2 id='大一-4'><span>大一</span></h2><ul><li><p><span>TOEIC 600</span></p><div align = "center"><img src = "./certification/TOEIC.png" width = "512" height = "100%"></div></li><li><p><span>CSEPT 230</span></p><div align = "center"><img src = "./certification/CSEPT.png" width = "512" height = "100%"></div></li><li><p><span>ICT使用 Python 程式設計 核心能力 / ICT using Python Programming - Essentials Level</span></p><div align = "center"><img src = "./" width = "512" height = "100%"></div><blockquote><p><span>在學校試場確定通過測驗，電子、紙本成績單尚未出來。</span></p></blockquote></li></ul></li></ul><hr /><h1 id='其他'><span>其他</span></h1><ul><li><h2 id='其他社群連結'><span>其他社群連結</span></h2><ul><li><h4 id='github'><img src = "./icon/github-mark-white.png" width = "16px" height = "100%"><span> </span><a href='https://github.com/zongzong0408'><strong><span>GitHub</span></strong></a></h4><ul><li><h5 id='ref-httpsgithubcomzongzong0408'><span>ref: </span><a href='https://github.com/zongzong0408'><em><a href='https://github.com/zongzong0408' target='_blank' class='url'>https://github.com/zongzong0408</a></em></a></h5></li></ul></li><li><h4 id='youtube'><img src = "./icon/yt_logo_rgb_light.png" width = "16px" height = "100%"><span> </span><a href='https://youtube.com/@zongzong0408'><strong><span>Youtube</span></strong></a></h4><ul><li><h5 id='ref-httpsyoutubecomzongzong0408'><span>ref: </span><a href='https://youtube.com/@zongzong0408'><em><a href='https://youtube.com/@zongzong0408' target='_blank' class='url'>https://youtube.com/@zongzong0408</a></em></a></h5></li></ul></li><li><h4 id='discord'><img src = "./icon/discord-mark-blue.png" width = "16px" height = "100%"><span> </span><a href='https://discord.com/users/zongzongchu0408'><strong><span>Discord</span></strong></a></h4><ul><li><h5 id='ref-httpsdiscordcomuserszongzongchu0408'><span>ref: </span><a href='https://discord.com/users/zongzongchu0408'><em><a href='https://discord.com/users/zongzongchu0408' target='_blank' class='url'>https://discord.com/users/zongzongchu0408</a></em></a></h5></li></ul></li></ul></li></ul><hr /><h1 id='網站日記'><span>網站日記</span></h1><p><span>這是關於朱容徵自述的網站。</span><br/><span>此處撰寫本網站的重要事件摘要。    </span></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>時間</span></th><th style='text-align:center;' ><span>代號</span></th><th><span>事件</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>2024/04/20</span></td><td style='text-align:center;' ><code>二哈</code></td><td><span>我的個人網站在</span><em><strong><span>github.io</span></strong></em><span>創建！</span><code>二哈</code><span>階段結束。</span></td></tr><tr><td style='text-align:center;' ><span>2024/04/30</span></td><td style='text-align:center;' ><code>柯基</code></td><td><span>網站主頁內容更新至</span><strong><span>大一</span></strong><span>。</span></td></tr><tr><td style='text-align:center;' ><span>2024/05/17</span></td><td style='text-align:center;' ><code>柯基</code></td><td><code>二哈</code><span>到</span><code>柯基</code><span>所有內容完成編輯並停止更改，</span><code>柯基</code><span>階段結束。</span></td></tr></tbody></table></figure></div></div>
+</div></li><li><p><span>IPAS 資訊安全工程師 初級</span></p><div align = "center"><img src = "./certification/IPAS 資訊安全工程師 初級.png" width = "512" height = "100%"></div></li></ul></li><li><h2 id='大一-4'><span>大一</span></h2><ul><li><p><span>TOEIC 600</span></p><div align = "center"><img src = "./certification/TOEIC.png" width = "512" height = "100%"></div></li><li><p><span>CSEPT 230</span></p><div align = "center"><img src = "./certification/CSEPT.png" width = "512" height = "100%"></div></li><li><p><span>ICT使用 Python 程式設計 核心能力 / ICT using Python Programming - Essentials Level</span></p><div align = "center"><img src = "./" width = "512" height = "100%"></div><blockquote><p><span>在學校試場確定通過測驗，電子、紙本成績單尚未出來。</span></p></blockquote></li></ul></li></ul><hr /><h1 id='其他'><span>其他</span></h1><ul><li><h2 id='其他社群連結'><span>其他社群連結</span></h2><ul><li><h4 id='github'><img src = "./icon/github-mark-white.png" width = "16px" height = "100%"><span> </span><a href='https://github.com/zongzong0408'><strong><span>GitHub</span></strong></a></h4><ul><li><h5 id='ref-httpsgithubcomzongzong0408'><span>ref: </span><a href='https://github.com/zongzong0408'><em><a href='https://github.com/zongzong0408' target='_blank' class='url'>https://github.com/zongzong0408</a></em></a></h5></li></ul></li><li><h4 id='youtube'><img src = "./icon/yt_logo_rgb_light.png" width = "16px" height = "100%"><span> </span><a href='https://youtube.com/@zongzong0408'><strong><span>Youtube</span></strong></a></h4><ul><li><h5 id='ref-httpsyoutubecomzongzong0408'><span>ref: </span><a href='https://youtube.com/@zongzong0408'><em><a href='https://youtube.com/@zongzong0408' target='_blank' class='url'>https://youtube.com/@zongzong0408</a></em></a></h5></li></ul></li><li><h4 id='discord'><img src = "./icon/discord-mark-blue.png" width = "16px" height = "100%"><span> </span><a href='https://discord.com/users/zongzongchu0408'><strong><span>Discord</span></strong></a></h4><ul><li><h5 id='ref-httpsdiscordcomuserszongzongchu0408'><span>ref: </span><a href='https://discord.com/users/zongzongchu0408'><em><a href='https://discord.com/users/zongzongchu0408' target='_blank' class='url'>https://discord.com/users/zongzongchu0408</a></em></a></h5></li></ul></li></ul></li></ul><hr /><h1 id='網站日記'><span>網站日記</span></h1><p><span>這是關於朱容徵自述的網站，此處撰寫本網站的重要事件摘要。    </span></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>時間</span></th><th style='text-align:center;' ><span>代號</span></th><th><span>事件</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>2024/04/20</span></td><td style='text-align:center;' ><code>二哈</code></td><td><span>我的個人網站在 </span><em><strong><span>github.io</span></strong></em><span> 創建！</span><code>二哈</code><span> 階段結束。</span></td></tr><tr><td style='text-align:center;' ><span>2024/04/30</span></td><td style='text-align:center;' ><code>柯基</code></td><td><span>網站主頁內容更新至 </span><strong><span>大一</span></strong><span>。</span></td></tr><tr><td style='text-align:center;' ><span>2024/05/17</span></td><td style='text-align:center;' ><code>柯基</code></td><td><code>二哈</code><span> 到 </span><code>柯基</code><span> 所有內容完成編輯並停止更改，</span><code>柯基</code><span> 階段結束。</span></td></tr></tbody></table></figure></div></div>
 
 <script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
 </html>
